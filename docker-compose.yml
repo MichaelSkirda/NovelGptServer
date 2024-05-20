@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  rensharpserver:
+    image: ${DOCKER_REGISTRY-}rensharpserver
+    build:
+      context: .
+      dockerfile: RenSharpServer/Dockerfile
+    ports:
+      - 5001:80

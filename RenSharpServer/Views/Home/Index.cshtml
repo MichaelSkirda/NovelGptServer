@@ -1,0 +1,58 @@
+﻿@{
+	Layout = "_Layout";
+}
+
+@using DAL.Models;
+@model RenSharpServer.ViewModels.IndexViewModel
+
+@section scripts
+{
+	<script src="js/signalr/dist/browser/signalr.min.js"></script>
+	<script type="text/javascript" src="./lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/dialog-updater.js"></script>
+}
+
+<div class="main-grid" id="main-grid">
+
+
+	@if(Model.Dialogs != null)
+	{
+
+		foreach (Dialog message in Model.Dialogs)
+		{
+			@await Html.PartialAsync("_Message", message)
+		}
+
+	}
+
+
+</div>
+
+<div class="bottom-menu">
+	<div class="bottom-status-bar">
+		<span>Текущий статус: </span>
+		@if(Model.CurrentStatus == true)
+		{
+			<span id="server-status">Включен</span>
+		}
+		else
+		{
+			<span id="server-status">Выключен</span>
+		}
+
+			
+	</div>
+
+	<div class="bottom-btns">
+		<div class="bottom-btn">
+			<button id="manual-off-btn">Выключить</button>
+			<button id="manual-on-btn">Включить</button>
+		</div>
+
+		<form class="bottom-btn" action="/history">
+			<button type="submit">История</button>
+		</form>
+	</div>
+	
+</div>

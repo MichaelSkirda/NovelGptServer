@@ -1,0 +1,219 @@
+.main
+{
+
+}
+
+.main-grid
+{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+  	gap: 60px;
+  	width: 90%;
+  	margin: 0 auto;
+}
+
+.dialog
+{
+	border: 3px solid black;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+}
+
+.dialog-not-active
+{
+	background-color: dimgray;
+}
+
+.dialog-active
+{
+	background-color: #7ae971;
+}
+
+.dialog-answered
+{
+	background-color: #687bff;
+}
+
+.dialog-done
+{
+	background-color: #ef7373;
+}
+
+.dialog > *
+{
+	border-top: 3px solid black;
+	border-bottom: 2px solid black;
+}
+
+.dialog-messages
+{
+	padding: 0;
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.dialog-message
+{
+	margin: 0;
+	padding: 10px 10px;
+	font-weight: 600;
+	list-style-type: none; 
+	border-bottom: 2px solid black;
+}
+
+.dialog-message.user-answer
+{
+	background: #CCC;
+	
+}
+
+.dialog-select
+{
+	border: none;
+}
+
+.dialog-select span
+{
+	font-size: 16px;
+	font-weight: 800;
+}
+
+.dialog-select input
+{
+	font-weight: 800;
+	font-size: 18px;
+}
+
+
+.dialog-header
+{
+	padding: 10px 10px 16px 10px;
+	transition: background-color 1s;
+
+}
+
+.dialog-header span
+{
+	font-weight: 800;
+	font-size: 22px;
+}
+
+.dialog-form
+{
+	padding: 10px 10px;
+	display: flex;
+}
+
+.dialog-text
+{
+	flex-direction: column;
+}
+
+.npc-select
+{
+	height: 46px;
+	width: 100%;
+	margin-right: 20px;
+	margin-left: 10px;
+	font-size: 18px;
+	font-weight: 800;
+	padding-left: 10px;
+}
+
+
+.npc-select option
+{
+	font-size: 22px;
+	line-height: 50px;
+}
+
+.dialog-text
+{
+	margin-top: 20px;
+}
+
+.dialog-text form
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.dialog-text textarea
+{
+	resize: none;
+	padding: 10px;
+}
+
+.dialog-text-btns
+{
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	width: 85%;
+	margin: 50px auto 20px auto;
+}
+
+.dialog-text-btns input
+{
+	padding: 10px 20px;
+	font-weight: 800;
+	font-size: 16px;
+}
+
+.bottom-menu
+{
+	margin-top: 75px;
+	margin-left: 25px;
+	padding-bottom: 125px;
+}
+
+.bottom-status-bar span
+{
+	font-size: 26px;
+	font-weight: 800;
+}
+
+.bottom-btn button
+{
+	padding: 10px 15px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.bottom-btns
+{
+	display: flex;
+}
+
+.bottom-btn
+{
+	margin-right: 15px;
+}
+
+
+@media(max-width: 1620px)
+{
+	.dialog-text-btns
+	{
+		width: 95%;
+	}
+
+}
+
+@media(max-width: 1370px)
+{
+	.dialog-text-btns input
+	{
+		padding: 8px 10px;
+	}
+}
+
+@media (max-width: 1270px)
+{
+	.main-grid
+	{
+		display: flex;
+		flex-direction: column;
+	}
+}
+

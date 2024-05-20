@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RenSharp</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Админ панель</h1>
+        </div>
+    </header>
+
+    <div class="main">
+
+        @RenderBody()
+
+    </div>
+
+    @RenderSection("scripts", required: false);
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RenSharp</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/site.css">
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<header>
+	<div class="header-title">
+		<h1>Админ панель</h1>
+	</div>
+</header>
+
+<div class="main">
+
+	<div class="main-grid">
+		
+		
+<div class="dialog" dialogid="1">
+
+	<div class="dialog-header dialog-not-active">
+		<span>#1 - Dialog at somelocation</span>
+	</div>
+
+
+	<ul class="dialog-messages">
+		
+		<li class="dialog-message">
+			<p>Привет кто кто?</p>
+		</li>
+
+		<li class="dialog-message">
+			<p>Ты чего молчишь?</p>
+		</li>
+
+		<li class="dialog-message user-answer">
+			<p>А сам кто ты?</p>
+		</li>
+
+		<li class="dialog-message">
+			<p>$SERVER_ANSWER: [СЕРВЕР ПОКА НЕ ОТВЕТИЛ]</p>
+		</li>
+
+		}
+	</ul>
+
+	<div class="dialog-form dialog-select">
+		<span>Ответ NPC:</span>
+
+		<select class="npc-select">
+			<option value="">[Вариант 1]</option>
+			<option value="">[Вариант 2]</option>
+			<option value="">[Вариант 3]</option>
+			<option value="">[Вариант 4]</option>
+			<option value="">[Вариант 5]</option>
+		</select>
+
+		<input type="button" class="npc-submit-btn" value="Отправить">
+
+	</div>
+
+	<div class="dialog-form dialog-text">
+		<textarea placeholder="Ответ NPC." class="textinput-dialog" rows="10" wrap="soft"></textarea>
+
+		<div class="dialog-text-btns">
+			<input type="button" class="sendanswer-btn" value="Отправить">
+			<input type="button" class="endofgame-btn" value="$END_OF_GAME" name="">
+			<input type="button" class="sendtogpt-btn" value="$SEND_TO_GPT" name="">
+		</div>
+	</div>
+
+</div>
+
+	<div class="bottom-menu">
+		<div class="bottom-status-bar">
+			<span>Текущий статус: </span>
+			<span>Включен</span>
+		</div>
+		
+		<div class="bottom-btn">
+			<a href="/server/changeStatus?mode=false&password=qweRTY%21%40%23123">
+				<button>Выключить</button>
+			</a>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="./lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+</html>

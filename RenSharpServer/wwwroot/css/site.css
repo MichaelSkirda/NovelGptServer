@@ -1,0 +1,17 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial';
+}
+
+header
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header-title
+{
+	display: inline-block;
+}

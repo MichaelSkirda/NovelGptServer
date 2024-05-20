@@ -1,0 +1,33 @@
+﻿@{
+	Layout = "_Layout";
+}
+
+@using DAL.Models;
+@model RenSharpServer.ViewModels.HistoryViewModel
+
+<div class="main-grid">
+
+
+	@if (Model.Dialogs != null)
+	{
+
+		foreach (Dialog message in Model.Dialogs)
+		{
+			@await Html.PartialAsync("_Message", message)
+		}
+
+	}
+
+
+</div>
+
+<div class="bottom-menu">
+
+	<div class="bottom-btns">
+
+		<form class="bottom-btn" action="/">
+			<button type="submit">Админ панель</button>
+		</form>
+	</div>
+
+</div>
